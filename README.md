@@ -1,6 +1,6 @@
 # React + Vite
 
-## View site thre: [ToDoByRedux]("https://to-do-list-by-redux.vercel.app/)
+## View site thre: [`ToDoByRedux`](https://to-do-list-by-redux.vercel.app/)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
