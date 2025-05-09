@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {addNewUser, changeStatus, delUser, editUserData} from './reducers/tableUsers'
+import "./App.css"
 
 const App = () => {
   const dispatch = useDispatch()
@@ -45,11 +46,11 @@ const App = () => {
 
 
   return (
-    <div>
+    <div className='body'>
       <button onClick={()=>setModal(!addModal)}>ADD USER</button>
       {
         addModal && (
-          <div>
+          <div className='modal'>
             <input value={addName} onInput={(e)=>setAddName(e.target.value)} type="text" placeholder='Name' />
             <input value={addAge} onInput={(e)=>setAddAge(e.target.value)} type="text" placeholder='Age' />
             <select value={addStatus} onChange={(e)=>setAddStatus(e.target.value)}>
@@ -66,7 +67,7 @@ const App = () => {
       }
       {
         editModal && (
-          <div>
+          <div className='modal'>
             <input value={editName} onInput={(e)=>setEditName(e.target.value)} type="text" placeholder='Name' />
             <input value={editAge} onInput={(e)=>setEditAge(e.target.value)} type="text" placeholder='Age' />
             <select value={editStatus} onChange={(e)=>setEditStatus(e.target.value)}>
@@ -76,17 +77,18 @@ const App = () => {
             <button onClick={()=>{
               setEditModal(!editModal);
               editUser()
-            }}>Add User</button>
+            }}>Edit User</button>
             <button onClick={()=>setEditModal(!editModal)}>Close</button>
           </div>
         )
       }
+      <div className="box">
       {
         data.map((el)=>(
-          <div key={el.id}>
+          <div className='card' key={el.id}>
             <h1>{el.name}</h1>
-            <h1>{el.age}</h1>
-            <h1>{el.status?"Active":"Inactive"}</h1>
+            <h2>{el.age}</h2>
+            <h3>{el.status?"Active":"Inactive"}</h3>
             <div className='actions'>
               <input checked={el.status} type="checkbox" onChange={()=>dispatch(changeStatus(el))} />
               <button onClick={()=>dispatch(delUser(el.id))}>Delete</button>
@@ -95,6 +97,7 @@ const App = () => {
           </div>
         ))
       }
+      </div>
     </div>
   )
 }

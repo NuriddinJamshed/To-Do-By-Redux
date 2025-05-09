@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 40vh;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.actions{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button{
+    background-color: #0099ff;
+    color: #fff;
+    border: 1px solid #0099ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.modal{
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #00aeff;
+    width: 30%;
+    padding: 30px;
+    left: 35%;
+    top: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.modal input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.modal select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
