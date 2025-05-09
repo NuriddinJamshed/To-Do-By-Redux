@@ -24,6 +24,9 @@ const App = () => {
       id: Date.now()
     }
     dispatch(addNewUser(user))
+    setAddAge("")
+    setAddName("")
+    setAddStatus("false")
   }
 
   function editUser(){
@@ -34,6 +37,9 @@ const App = () => {
       id: idx
     }
     dispatch(editUserData(user))
+    setEditAge("")
+    setEditName("")
+    setEditStatus("false")
   }
 
   function editFunc(elem){

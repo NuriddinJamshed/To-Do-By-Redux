@@ -12,7 +12,7 @@ export const tableUsers = createSlice({
                 id: 1
             },
             {
-                name: "Hushang",
+                name: "Hasan",
                 age: 8,
                 status: true ,
                 id: 2
